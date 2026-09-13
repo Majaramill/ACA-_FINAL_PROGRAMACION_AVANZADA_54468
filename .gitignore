@@ -1,0 +1,15 @@
+# Dependencias: NUNCA se suben a GitHub.
+# Se reconstruyen con "npm install" leyendo el package.json
+node_modules/
+
+# Variables de entorno y secretos
+.env
+
+# Logs
+npm-debug.log*
+*.log
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini

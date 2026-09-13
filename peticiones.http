@@ -1,0 +1,74 @@
+### =====================================================================
+###  PRUEBAS DE LA API — Gestión de Estudiantes
+### =====================================================================
+###  Requiere la extensión "REST Client" (humao.rest-client) en VS Code.
+###  1. Levante el servidor:  npm start
+###  2. Haga clic en "Send Request" sobre cualquier bloque de abajo.
+###  La respuesta se abre en un panel al lado: sirve como evidencia.
+### =====================================================================
+
+@host = http://localhost:3000/api
+
+
+### 1. Listar todos los estudiantes
+GET {{host}}/estudiantes
+
+
+### 2. Buscar estudiante por ID (existe)
+GET {{host}}/estudiantes/4
+
+
+### 2b. Buscar estudiante por ID (no existe -> 404)
+GET {{host}}/estudiantes/99
+
+
+### 2c. ID inválido (no es número -> 400)
+GET {{host}}/estudiantes/abc
+
+
+### 3. Buscar por carrera (con tilde)
+GET {{host}}/estudiantes/carrera/Ingeniería de Sistemas
+
+
+### 3b. Buscar por carrera (sin tilde: también funciona)
+GET {{host}}/estudiantes/carrera/contaduria
+
+
+### 4. Estudiantes aprobados
+GET {{host}}/estudiantes/aprobados
+
+
+### 5. Estudiantes reprobados
+GET {{host}}/estudiantes/reprobados
+
+
+### 6. Promedio general
+GET {{host}}/estadisticas/promedio
+
+
+### 7. Mejor estudiante
+GET {{host}}/estadisticas/mejor
+
+
+### 8. Estudiante con menor promedio
+GET {{host}}/estadisticas/peor
+
+
+### 9. Conteo de estudiantes por carrera
+GET {{host}}/estadisticas/carreras
+
+
+### 10. Estudiantes del semestre 5
+GET {{host}}/estudiantes/semestre/5
+
+
+### 11. Estudiantes mayores de 22 años
+GET {{host}}/estudiantes/mayores/22
+
+
+### 12. Reporte académico general
+GET {{host}}/reporte
+
+
+### Reto. Ranking por promedio
+GET {{host}}/ranking

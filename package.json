@@ -1,0 +1,20 @@
+{
+  "name": "gestion-estudiantes",
+  "version": "1.0.0",
+  "description": "Ejercicio de gestion de estudiantes con Node.js, JavaScript y Express",
+  "main": "servidor.js",
+  "scripts": {
+    "start": "node servidor.js",
+    "consola": "node consola.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "arrays",
+    "funciones"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
