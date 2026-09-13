@@ -60,7 +60,7 @@ function prueba1() {
 
   // comprobacion de que es una COPIA y no el array original
   console.log("\n¿Es el mismo array en memoria?", resultado === estudiantes);
-  console.log("(debe decir false: es una copia, por eso el original esta a salvo)");
+  console.log("(Es Falso porque debe ser la copia del array y no el original)");
 }
 
 function prueba2() {
@@ -188,7 +188,7 @@ function prueba10() {
 }
 
 function prueba11() {
-  const edad = valor === undefined ? 22 : Number(valor);
+  const edad = valor === undefined ? 18 : Number(valor);
 
   titulo(`PUNTO 11 — mayoresDeEdad(estudiantes, ${edad})`);
 
@@ -200,7 +200,7 @@ function prueba11() {
   }
 
   console.log(`\nOjo: los de exactamente ${edad} años quedan POR FUERA,`);
-  console.log("porque la condicion usa > y no >=");
+  console.log("porque la condicion usa > y no >= ya que deben ser mayor a la edad indicada.");
 }
 
 function prueba12() {

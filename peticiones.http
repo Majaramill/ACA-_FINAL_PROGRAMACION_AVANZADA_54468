@@ -63,7 +63,7 @@ GET {{host}}/estudiantes/semestre/5
 
 
 ### 11. Estudiantes mayores de 22 años
-GET {{host}}/estudiantes/mayores/22
+GET {{host}}/estudiantes/mayores/18
 
 
 ### 12. Reporte académico general

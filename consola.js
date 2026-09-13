@@ -120,8 +120,8 @@ function main() {
   linea("10. Estudiantes del semestre 5");
   imprimirEstudiantes(f.buscarPorSemestre(estudiantes, 5));
 
-  linea("11. Estudiantes mayores de 22 años");
-  imprimirEstudiantes(f.mayoresDeEdad(estudiantes, 22));
+  linea("11. Estudiantes mayores de 18 años");
+  imprimirEstudiantes(f.mayoresDeEdad(estudiantes, 18));
 
   linea("12. Reporte general");
   imprimirReporte(estudiantes);
