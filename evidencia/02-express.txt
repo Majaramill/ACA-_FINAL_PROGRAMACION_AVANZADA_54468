@@ -1,0 +1,520 @@
+EVIDENCIA DE EJECUCION DE LA API (Express)
+Proyecto: Gestion de Estudiantes (Node.js + Express)
+Servidor: http://localhost:3100
+Fecha:    13/09/2026 10:11:50
+
+======================================================================
+PUNTO 1 — Listar todos
+======================================================================
+GET /api/estudiantes
+
+Codigo HTTP: 200
+Respuesta:
+{
+  "total": 10,
+  "datos": [
+    {
+      "id": 1,
+      "nombre": "Andrés",
+      "edad": 21,
+      "carrera": "Ingeniería de Sistemas",
+      "semestre": 5,
+      "promedio": 4.2
+    },
+    {
+      "id": 2,
+      "nombre": "Laura",
+      "edad": 20,
+      "carrera": "Administración",
+      "semestre": 4,
+      "promedio": 3.8
+    },
+    {
+      "id": 3,
+      "nombre": "Carlos",
+      "edad": 24,
+      "carrera": "Ingeniería de Sistemas",
+      "semestre": 7,
+      "promedio": 2.9
+    },
+    {
+      "id": 4,
+      "nombre": "Mariana",
+      "edad": 22,
+      "carrera": "Contaduría",
+      "semestre": 6,
+      "promedio": 4.5
+    },
+    {
+      "id": 5,
+      "nombre": "Juan",
+      "edad": 19,
+      "carrera": "Ingeniería de Sistemas",
+      "semestre": 3,
+      "promedio": 3.2
+    },
+    {
+      "id": 6,
+      "nombre": "Sofía",
+      "edad": 23,
+      "carrera": "Administración",
+      "semestre": 8,
+      "promedio": 4.7
+    },
+    {
+      "id": 7,
+      "nombre": "Daniel",
+      "edad": 25,
+      "carrera": "Contaduría",
+      "semestre": 9,
+      "promedio": 2.7
+    },
+    {
+      "id": 8,
+      "nombre": "Valentina",
+      "edad": 21,
+      "carrera": "Ingeniería de Sistemas",
+      "semestre": 5,
+      "promedio": 3.9
+    },
+    {
+      "id": 9,
+      "nombre": "Sebastián",
+      "edad": 22,
+      "carrera": "Administración",
+      "semestre": 6,
+      "promedio": 3.4
+    },
+    {
+      "id": 10,
+      "nombre": "Camila",
+      "edad": 20,
+      "carrera": "Contaduría",
+      "semestre": 4,
+      "promedio": 4.1
+    }
+  ]
+}
+
+======================================================================
+PUNTO 2 — Buscar por ID (existe)
+======================================================================
+GET /api/estudiantes/4
+
+Codigo HTTP: 200
+Respuesta:
+{
+  "id": 4,
+  "nombre": "Mariana",
+  "edad": 22,
+  "carrera": "Contaduría",
+  "semestre": 6,
+  "promedio": 4.5
+}
+
+======================================================================
+PUNTO 2b — ID inexistente -> 404
+======================================================================
+GET /api/estudiantes/99
+
+Codigo HTTP: 404
+Respuesta:
+{
+  "mensaje": "Estudiante con ID 99 no encontrado."
+}
+
+======================================================================
+PUNTO 2c — ID invalido -> 400
+======================================================================
+GET /api/estudiantes/abc
+
+Codigo HTTP: 400
+Respuesta:
+{
+  "mensaje": "El ID debe ser un número."
+}
+
+======================================================================
+PUNTO 3 — Buscar por carrera
+======================================================================
+GET /api/estudiantes/carrera/Ingenieria de Sistemas
+
+Codigo HTTP: 200
+Respuesta:
+{
+  "carrera": "Ingenieria de Sistemas",
+  "total": 4,
+  "datos": [
+    {
+      "id": 1,
+      "nombre": "Andrés",
+      "edad": 21,
+      "carrera": "Ingeniería de Sistemas",
+      "semestre": 5,
+      "promedio": 4.2
+    },
+    {
+      "id": 3,
+      "nombre": "Carlos",
+      "edad": 24,
+      "carrera": "Ingeniería de Sistemas",
+      "semestre": 7,
+      "promedio": 2.9
+    },
+    {
+      "id": 5,
+      "nombre": "Juan",
+      "edad": 19,
+      "carrera": "Ingeniería de Sistemas",
+      "semestre": 3,
+      "promedio": 3.2
+    },
+    {
+      "id": 8,
+      "nombre": "Valentina",
+      "edad": 21,
+      "carrera": "Ingeniería de Sistemas",
+      "semestre": 5,
+      "promedio": 3.9
+    }
+  ]
+}
+
+======================================================================
+PUNTO 4 — Aprobados
+======================================================================
+GET /api/estudiantes/aprobados
+
+Codigo HTTP: 200
+Respuesta:
+{
+  "criterio": "promedio >= 3",
+  "total": 8,
+  "datos": [
+    {
+      "id": 1,
+      "nombre": "Andrés",
+      "edad": 21,
+      "carrera": "Ingeniería de Sistemas",
+      "semestre": 5,
+      "promedio": 4.2
+    },
+    {
+      "id": 2,
+      "nombre": "Laura",
+      "edad": 20,
+      "carrera": "Administración",
+      "semestre": 4,
+      "promedio": 3.8
+    },
+    {
+      "id": 4,
+      "nombre": "Mariana",
+      "edad": 22,
+      "carrera": "Contaduría",
+      "semestre": 6,
+      "promedio": 4.5
+    },
+    {
+      "id": 5,
+      "nombre": "Juan",
+      "edad": 19,
+      "carrera": "Ingeniería de Sistemas",
+      "semestre": 3,
+      "promedio": 3.2
+    },
+    {
+      "id": 6,
+      "nombre": "Sofía",
+      "edad": 23,
+      "carrera": "Administración",
+      "semestre": 8,
+      "promedio": 4.7
+    },
+    {
+      "id": 8,
+      "nombre": "Valentina",
+      "edad": 21,
+      "carrera": "Ingeniería de Sistemas",
+      "semestre": 5,
+      "promedio": 3.9
+    },
+    {
+      "id": 9,
+      "nombre": "Sebastián",
+      "edad": 22,
+      "carrera": "Administración",
+      "semestre": 6,
+      "promedio": 3.4
+    },
+    {
+      "id": 10,
+      "nombre": "Camila",
+      "edad": 20,
+      "carrera": "Contaduría",
+      "semestre": 4,
+      "promedio": 4.1
+    }
+  ]
+}
+
+======================================================================
+PUNTO 5 — Reprobados
+======================================================================
+GET /api/estudiantes/reprobados
+
+Codigo HTTP: 200
+Respuesta:
+{
+  "criterio": "promedio < 3",
+  "total": 2,
+  "datos": [
+    {
+      "id": 3,
+      "nombre": "Carlos",
+      "edad": 24,
+      "carrera": "Ingeniería de Sistemas",
+      "semestre": 7,
+      "promedio": 2.9
+    },
+    {
+      "id": 7,
+      "nombre": "Daniel",
+      "edad": 25,
+      "carrera": "Contaduría",
+      "semestre": 9,
+      "promedio": 2.7
+    }
+  ]
+}
+
+======================================================================
+PUNTO 6 — Promedio general
+======================================================================
+GET /api/estadisticas/promedio
+
+Codigo HTTP: 200
+Respuesta:
+{
+  "promedioGeneral": 3.74
+}
+
+======================================================================
+PUNTO 7 — Mejor estudiante
+======================================================================
+GET /api/estadisticas/mejor
+
+Codigo HTTP: 200
+Respuesta:
+{
+  "id": 6,
+  "nombre": "Sofía",
+  "edad": 23,
+  "carrera": "Administración",
+  "semestre": 8,
+  "promedio": 4.7
+}
+
+======================================================================
+PUNTO 8 — Menor promedio
+======================================================================
+GET /api/estadisticas/peor
+
+Codigo HTTP: 200
+Respuesta:
+{
+  "id": 7,
+  "nombre": "Daniel",
+  "edad": 25,
+  "carrera": "Contaduría",
+  "semestre": 9,
+  "promedio": 2.7
+}
+
+======================================================================
+PUNTO 9 — Conteo por carrera
+======================================================================
+GET /api/estadisticas/carreras
+
+Codigo HTTP: 200
+Respuesta:
+{
+  "Ingeniería de Sistemas": 4,
+  "Administración": 3,
+  "Contaduría": 3
+}
+
+======================================================================
+PUNTO 10 — Por semestre
+======================================================================
+GET /api/estudiantes/semestre/5
+
+Codigo HTTP: 200
+Respuesta:
+{
+  "semestre": 5,
+  "total": 2,
+  "datos": [
+    {
+      "id": 1,
+      "nombre": "Andrés",
+      "edad": 21,
+      "carrera": "Ingeniería de Sistemas",
+      "semestre": 5,
+      "promedio": 4.2
+    },
+    {
+      "id": 8,
+      "nombre": "Valentina",
+      "edad": 21,
+      "carrera": "Ingeniería de Sistemas",
+      "semestre": 5,
+      "promedio": 3.9
+    }
+  ]
+}
+
+======================================================================
+PUNTO 11 — Mayores de 22
+======================================================================
+GET /api/estudiantes/mayores/22
+
+Codigo HTTP: 200
+Respuesta:
+{
+  "mayoresDe": 22,
+  "total": 3,
+  "datos": [
+    {
+      "id": 3,
+      "nombre": "Carlos",
+      "edad": 24,
+      "carrera": "Ingeniería de Sistemas",
+      "semestre": 7,
+      "promedio": 2.9
+    },
+    {
+      "id": 6,
+      "nombre": "Sofía",
+      "edad": 23,
+      "carrera": "Administración",
+      "semestre": 8,
+      "promedio": 4.7
+    },
+    {
+      "id": 7,
+      "nombre": "Daniel",
+      "edad": 25,
+      "carrera": "Contaduría",
+      "semestre": 9,
+      "promedio": 2.7
+    }
+  ]
+}
+
+======================================================================
+PUNTO 12 — Reporte general
+======================================================================
+GET /api/reporte
+
+Codigo HTTP: 200
+Respuesta:
+{
+  "totalEstudiantes": 10,
+  "aprobados": 8,
+  "reprobados": 2,
+  "promedioGeneral": 3.74,
+  "mejorEstudiante": {
+    "id": 6,
+    "nombre": "Sofía",
+    "edad": 23,
+    "carrera": "Administración",
+    "semestre": 8,
+    "promedio": 4.7
+  },
+  "peorEstudiante": {
+    "id": 7,
+    "nombre": "Daniel",
+    "edad": 25,
+    "carrera": "Contaduría",
+    "semestre": 9,
+    "promedio": 2.7
+  },
+  "estudiantesPorCarrera": {
+    "Ingeniería de Sistemas": 4,
+    "Administración": 3,
+    "Contaduría": 3
+  }
+}
+
+======================================================================
+PUNTO reto — Ranking
+======================================================================
+GET /api/ranking
+
+Codigo HTTP: 200
+Respuesta:
+[
+  {
+    "posicion": 1,
+    "nombre": "Sofía",
+    "promedio": 4.7
+  },
+  {
+    "posicion": 2,
+    "nombre": "Mariana",
+    "promedio": 4.5
+  },
+  {
+    "posicion": 3,
+    "nombre": "Andrés",
+    "promedio": 4.2
+  },
+  {
+    "posicion": 4,
+    "nombre": "Camila",
+    "promedio": 4.1
+  },
+  {
+    "posicion": 5,
+    "nombre": "Valentina",
+    "promedio": 3.9
+  },
+  {
+    "posicion": 6,
+    "nombre": "Laura",
+    "promedio": 3.8
+  },
+  {
+    "posicion": 7,
+    "nombre": "Sebastián",
+    "promedio": 3.4
+  },
+  {
+    "posicion": 8,
+    "nombre": "Juan",
+    "promedio": 3.2
+  },
+  {
+    "posicion": 9,
+    "nombre": "Carlos",
+    "promedio": 2.9
+  },
+  {
+    "posicion": 10,
+    "nombre": "Daniel",
+    "promedio": 2.7
+  }
+]
+
+======================================================================
+PUNTO 404 — Ruta inexistente
+======================================================================
+GET /api/ruta-que-no-existe
+
+Codigo HTTP: 404
+Respuesta:
+{
+  "mensaje": "Ruta no encontrada.",
+  "ruta": "/api/ruta-que-no-existe"
+}

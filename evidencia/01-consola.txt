@@ -1,0 +1,146 @@
+EVIDENCIA DE EJECUCION EN CONSOLA
+Proyecto: Gestion de Estudiantes (Node.js)
+Comando:  node consola.js
+Fecha:    13/09/2026 10:11:48
+
+-------------------------------------------------------
+1. LISTADO DE TODOS LOS ESTUDIANTES
+-------------------------------------------------------
+ID: 1 | Andrés     | Edad: 21 | Ingeniería de Sistemas | Sem: 5 | Promedio: 4.2
+ID: 2 | Laura      | Edad: 20 | Administración         | Sem: 4 | Promedio: 3.8
+ID: 3 | Carlos     | Edad: 24 | Ingeniería de Sistemas | Sem: 7 | Promedio: 2.9
+ID: 4 | Mariana    | Edad: 22 | Contaduría             | Sem: 6 | Promedio: 4.5
+ID: 5 | Juan       | Edad: 19 | Ingeniería de Sistemas | Sem: 3 | Promedio: 3.2
+ID: 6 | Sofía      | Edad: 23 | Administración         | Sem: 8 | Promedio: 4.7
+ID: 7 | Daniel     | Edad: 25 | Contaduría             | Sem: 9 | Promedio: 2.7
+ID: 8 | Valentina  | Edad: 21 | Ingeniería de Sistemas | Sem: 5 | Promedio: 3.9
+ID: 9 | Sebastián  | Edad: 22 | Administración         | Sem: 6 | Promedio: 3.4
+ID: 10 | Camila     | Edad: 20 | Contaduría             | Sem: 4 | Promedio: 4.1
+Total: 10 estudiante(s)
+
+-------------------------------------------------------
+2. BUSCAR ESTUDIANTE POR ID (ID = 4)
+-------------------------------------------------------
+Nombre:   Mariana
+Edad:     22
+Carrera:  Contaduría
+Semestre: 6
+Promedio: 4.5
+
+-------------------------------------------------------
+2B. BUSCAR UN ID QUE NO EXISTE (ID = 99)
+-------------------------------------------------------
+Estudiante no encontrado.
+
+-------------------------------------------------------
+3. ESTUDIANTES DE INGENIERÍA DE SISTEMAS
+-------------------------------------------------------
+ID: 1 | Andrés     | Edad: 21 | Ingeniería de Sistemas | Sem: 5 | Promedio: 4.2
+ID: 3 | Carlos     | Edad: 24 | Ingeniería de Sistemas | Sem: 7 | Promedio: 2.9
+ID: 5 | Juan       | Edad: 19 | Ingeniería de Sistemas | Sem: 3 | Promedio: 3.2
+ID: 8 | Valentina  | Edad: 21 | Ingeniería de Sistemas | Sem: 5 | Promedio: 3.9
+Total: 4 estudiante(s)
+
+-------------------------------------------------------
+4. ESTUDIANTES APROBADOS (PROMEDIO >= 3.0)
+-------------------------------------------------------
+ID: 1 | Andrés     | Edad: 21 | Ingeniería de Sistemas | Sem: 5 | Promedio: 4.2
+ID: 2 | Laura      | Edad: 20 | Administración         | Sem: 4 | Promedio: 3.8
+ID: 4 | Mariana    | Edad: 22 | Contaduría             | Sem: 6 | Promedio: 4.5
+ID: 5 | Juan       | Edad: 19 | Ingeniería de Sistemas | Sem: 3 | Promedio: 3.2
+ID: 6 | Sofía      | Edad: 23 | Administración         | Sem: 8 | Promedio: 4.7
+ID: 8 | Valentina  | Edad: 21 | Ingeniería de Sistemas | Sem: 5 | Promedio: 3.9
+ID: 9 | Sebastián  | Edad: 22 | Administración         | Sem: 6 | Promedio: 3.4
+ID: 10 | Camila     | Edad: 20 | Contaduría             | Sem: 4 | Promedio: 4.1
+Total: 8 estudiante(s)
+
+-------------------------------------------------------
+5. ESTUDIANTES REPROBADOS (PROMEDIO < 3.0)
+-------------------------------------------------------
+ID: 3 | Carlos     | Edad: 24 | Ingeniería de Sistemas | Sem: 7 | Promedio: 2.9
+ID: 7 | Daniel     | Edad: 25 | Contaduría             | Sem: 9 | Promedio: 2.7
+Total: 2 estudiante(s)
+
+-------------------------------------------------------
+6. PROMEDIO GENERAL
+-------------------------------------------------------
+Promedio general: 3.74
+
+-------------------------------------------------------
+7. MEJOR ESTUDIANTE
+-------------------------------------------------------
+Nombre:   Sofía
+Edad:     23
+Carrera:  Administración
+Semestre: 8
+Promedio: 4.7
+
+-------------------------------------------------------
+8. ESTUDIANTE CON MENOR PROMEDIO
+-------------------------------------------------------
+Nombre:   Daniel
+Edad:     25
+Carrera:  Contaduría
+Semestre: 9
+Promedio: 2.7
+
+-------------------------------------------------------
+9. CANTIDAD DE ESTUDIANTES POR CARRERA
+-------------------------------------------------------
+Ingeniería de Sistemas: 4
+Administración: 3
+Contaduría: 3
+
+-------------------------------------------------------
+10. ESTUDIANTES DEL SEMESTRE 5
+-------------------------------------------------------
+ID: 1 | Andrés     | Edad: 21 | Ingeniería de Sistemas | Sem: 5 | Promedio: 4.2
+ID: 8 | Valentina  | Edad: 21 | Ingeniería de Sistemas | Sem: 5 | Promedio: 3.9
+Total: 2 estudiante(s)
+
+-------------------------------------------------------
+11. ESTUDIANTES MAYORES DE 22 AÑOS
+-------------------------------------------------------
+ID: 3 | Carlos     | Edad: 24 | Ingeniería de Sistemas | Sem: 7 | Promedio: 2.9
+ID: 6 | Sofía      | Edad: 23 | Administración         | Sem: 8 | Promedio: 4.7
+ID: 7 | Daniel     | Edad: 25 | Contaduría             | Sem: 9 | Promedio: 2.7
+Total: 3 estudiante(s)
+
+-------------------------------------------------------
+12. REPORTE GENERAL
+-------------------------------------------------------
+
+========== REPORTE ACADÉMICO ==========
+
+Total de estudiantes:            10
+Estudiantes aprobados:           8
+Estudiantes reprobados:          2
+Promedio general:                3.74
+Mejor estudiante:                Sofía (4.7)
+Estudiante con menor promedio:   Daniel (2.7)
+
+========================================
+
+-------------------------------------------------------
+RETO ADICIONAL: RANKING POR PROMEDIO
+-------------------------------------------------------
+
+===== RANKING =====
+
+1. Sofía - 4.7
+2. Mariana - 4.5
+3. Andrés - 4.2
+4. Camila - 4.1
+5. Valentina - 3.9
+6. Laura - 3.8
+7. Sebastián - 3.4
+8. Juan - 3.2
+9. Carlos - 2.9
+10. Daniel - 2.7
+
+===================
+
+-------------------------------------------------------
+VERIFICACIÓN: EL ARRAY ORIGINAL NO FUE MODIFICADO
+-------------------------------------------------------
+Primer estudiante del array original: Andrés

@@ -7,7 +7,7 @@
  *  Ubicacion: src/rutas.js  (al lado de datos.js y funciones.js)
  *
  *  Cada endpoint llama UNA funcion de src/funciones.js y devuelve JSON.
- *  Ojo con el orden: las rutas fijas (/aprobados) van ANTES de la ruta
+ * las rutas fijas (/aprobados) van ANTES de la ruta
  *  con parametro (/:id), porque Express evalua de arriba hacia abajo y
  *  "/estudiantes/aprobados" tambien encaja en "/estudiantes/:id".
  * =====================================================================

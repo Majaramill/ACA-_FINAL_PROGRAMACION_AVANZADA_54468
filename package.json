@@ -5,7 +5,9 @@
   "main": "servidor.js",
   "scripts": {
     "start": "node servidor.js",
-    "consola": "node consola.js"
+    "consola": "node consola.js",
+    "pruebas": "node pruebas.js",
+    "evidencia": "node evidencia.js"
   },
   "keywords": [
     "nodejs",
